@@ -5,7 +5,7 @@
 ##########################################################################
 ##########################################################################
                      API="template" 
-                     google_sheet="https://docs.google.com/spreadsheets/d/1H7UgGtAy3JKvulLqGXVm5zeNq1FdNKonMxxBETQtjXQ/edit?gid=1610289956#gid=1610289956" 
+                     google_sheet="https://docs.google.com/spreadsheets/d/16rWRaFYccA5XzzPAnOiSfQhpP_p4u6oGP14UzKjonC4/edit?gid=1610289956#gid=1610289956" 
                      id="1"                 #เปลี่ยน id ทุกครั้งที่ยิง
                      user="1";            #จำนวนผู้ใช้งาน
                      duration="1";         #วินาที
