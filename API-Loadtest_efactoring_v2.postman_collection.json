@@ -1,0 +1,651 @@
+{
+  "info": {
+    "_postman_id": "c3281caa-12fa-446c-b267-169c39cd0e51",
+    "name": "API-Loadtest_efactoring_v2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15779867",
+    "_collection_link": "https://go.postman.co/collection/15779867-c3281caa-12fa-446c-b267-169c39cd0e51?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Seller",
+      "item": [
+        {
+          "name": "[1] getListFactor",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"accountOneId\": \"1334789002480590\",\r\n  \"sellerId\": \"8871508007916\",\r\n  \"limit\": 20,\r\n  \"offset\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/seller/contract/getListFactor",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "seller",
+                "contract",
+                "getListFactor"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[2] getInfoContract",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"sellerId\": \"8871508007916\",\r\n  \"accountOneId\": \"1334789002480590\",\r\n  \"contractId\": \"17834fdb-fef4-4530-b36f-f9fc55ca1841\",\r\n  \"platformId\": \"2460437578782\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/seller/contract/getInfoContract",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "seller",
+                "contract",
+                "getInfoContract"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[3] getMaxamount",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"seller_id\": \"8871508007916\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/seller/dashboard/getMaxamount",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "seller",
+                "dashboard",
+                "getMaxamount"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[4] putInvoiceKeyIn",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"sellerId\": \"8871508007916\",\r\n  \"sellerBranch\": \"00000\",\r\n  \"sellerName\": \"เซลเลอร์\",\r\n  \"platformId\": \"8871508007916\",\r\n  \"accountOneId\": \"1334789002480590\",\r\n  \"data_inv\": [\r\n    {\r\n      \"invoiceID\": \"loadtest-0000\",\r\n      \"type\": {\r\n        \"text\": \"ใบแจ้งหนี้\",\r\n        \"value\": \"invoice\"\r\n      },\r\n      \"buyerID\": \"5541274224078\",\r\n      \"buyerBranch\": \"11112\",\r\n      \"buyerName\": \"บริษัท ทดสอบ จำกัด\",\r\n      \"issueDate\": \"2026-07-01T00:00:00\",\r\n      \"amount\": \"999\",\r\n      \"dueDate\": \"2026-08-31T00:00:00\",\r\n      \"PORef\": \"PO\",\r\n      \"fileInvoice\": [],\r\n      \"fileAttachment\": [],\r\n      \"totalFiles\": \"0\"\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/seller/importdata/putInvoiceKeyIn",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "seller",
+                "importdata",
+                "putInvoiceKeyIn"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[5] getListInvoice",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"sellerId\": \"8871508007916\",\r\n  \"sellerBranch\": \"00000\",\r\n  \"limit\": 30,\r\n  \"offset\": 0,\r\n  \"accountOneId\": \"1334789002480590\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/seller/disburse/getListInvoice",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "seller",
+                "disburse",
+                "getListInvoice"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[6] getListOverDueInvoice",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"sellerId\": \"8871508007916\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/seller/disburse/getListOverDueInvoice",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "seller",
+                "disburse",
+                "getListOverDueInvoice"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[7] getListAttachment",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"invoiceId\": \"0b4ab5af-19bc-41db-83af-b2cf534a901a\",\r\n  \"limit\": 10,\r\n  \"offset\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/seller/report/getListAttachment",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "seller",
+                "report",
+                "getListAttachment"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[8] getListGroup",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"sellerId\": \"8871508007916\",\r\n  \"accountOneId\": \"1334789002480590\",\r\n  \"limit\": 30,\r\n  \"offset\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/seller/report/getListGroup",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "seller",
+                "report",
+                "getListGroup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[9] getReportLog",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"seller_id\": \"8871508007916\",\r\n  \"limit\": 50,\r\n  \"offset\": 0,\r\n  \"accountOneId\": \"1334789002480590\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/seller/reportlog/getReportLog",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "seller",
+                "reportlog",
+                "getReportLog"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Factor",
+      "item": [
+        {
+          "name": "[1] getListSeller",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"accountOneId\": \"1334789002480590\",\r\n  \"platformId\": \"2460437578782\",\r\n  \"limit\": 10,\r\n  \"offset\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/factor/contract/getListSeller",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "factor",
+                "contract",
+                "getListSeller"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[2] getListBuyer",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"accountOneId\": \"1334789002480590\",\r\n  \"platformId\": \"2460437578782\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/factor/contract/getListBuyer",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "factor",
+                "contract",
+                "getListBuyer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[3] getAmountAll",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"platform_id\": \"2460437578782\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/factor/dashboard/getAmountAll",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "factor",
+                "dashboard",
+                "getAmountAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[4] getListBar",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"platform_id\": \"2460437578782\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/factor/dashboard/getListBar",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "factor",
+                "dashboard",
+                "getListBar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[5] getSeller",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"platformId\": \"2460437578782\",\r\n  \"accountOneId\": \"1334789002480590\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/factor/disburse/getSeller",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "factor",
+                "disburse",
+                "getSeller"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[6] getGroupInvoice",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"platformId\": \"2460437578782\",\r\n  \"accountOneId\": \"1334789002480590\",\r\n  \"sellerTaxId\": \"8871508007916\",\r\n  \"limit\": 20,\r\n  \"offset\": 0,\r\n  \"status\": \"SENTED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/factor/disburse/getGroupInvoice",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "factor",
+                "disburse",
+                "getGroupInvoice"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[7] getInvoicePrepareToFinance",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"platformId\": \"2460437578782\",\r\n  \"platformBranch\": \"00000\",\r\n  \"accountOneId\": \"1334789002480590\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/factor/reportlog/getInvoicePrepareToFinance",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "factor",
+                "reportlog",
+                "getInvoicePrepareToFinance"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[8] getReportLog",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"platform_id\": \"2460437578782\",\r\n  \"limit\": 50,\r\n  \"offset\": 0,\r\n  \"accountOneId\": \"1334789002480590\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/factor/reportlog/getReportLog",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "factor",
+                "reportlog",
+                "getReportLog"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[9] getListInterestedCustomer",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"platform_id\": \"2460437578782\",\r\n  \"accountOneId\": \"1334789002480590\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatfactoring.one.th/service/factor/config/getListInterestedCustomer",
+              "protocol": "https",
+              "host": [
+                "uatfactoring",
+                "one",
+                "th"
+              ],
+              "path": [
+                "service",
+                "factor",
+                "config",
+                "getListInterestedCustomer"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

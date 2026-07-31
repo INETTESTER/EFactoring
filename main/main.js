@@ -11,6 +11,15 @@ import { getListOverDueInvoice_seller } from '../api/getListOverDueInvoice_selle
 import { getListAttachment_seller } from '../api/getListAttachment_seller.js';
 import { getListGroup_seller } from '../api/getListGroup_seller.js';
 import { getReportLog_seller } from '../api/getReportLog_seller.js';
+import { getListFactor_Factor } from '../api/getListFactor_Factor.js';
+import { getInfoContract_Factor } from '../api/getInfoContract_Factor.js';
+import { getMaxamount_Factor } from '../api/getMaxamount_Factor.js';
+import { putInvoiceKeyIn_Factor } from '../api/putInvoiceKeyIn_Factor.js';
+import { getListInvoice_Factor } from '../api/getListInvoice_Factor.js';
+import { getListOverDueInvoice_Factor } from '../api/getListOverDueInvoice_Factor.js';
+import { getListAttachment_Factor } from '../api/getListAttachment_Factor.js';
+import { getListGroup_Factor } from '../api/getListGroup_Factor.js';
+import { getReportLog_Factor } from '../api/getReportLog_Factor.js';
 
 
 
@@ -28,6 +37,16 @@ export default function () {    //เรียกใช้ API ใน export def
   //response = getListGroup_seller()      //8
   //response = getReportLog_seller()    //9
 
+  //------------ Factor
+  //response = getListFactor_Factor()   //1
+  //response = getInfoContract_Factor()   //2
+  //response = getMaxamount_Factor()    //3
+  //response = putInvoiceKeyIn_Factor()   //4
+  //response = getListInvoice_Factor()    //5
+  //response = getListOverDueInvoice_Factor()   //6
+  //response = getListAttachment_Factor()   //7
+  //response = getListGroup_Factor()    //8
+  //response = getReportLog_Factor()    //9
 
   error_check(response);
   sleep(1)
