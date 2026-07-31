@@ -3,13 +3,30 @@ import { sleep } from 'k6';
 import { error_check } from '../check/check.js';
 import { scenario } from 'k6/execution';
 import { getListFactor_seller } from '../api/getListFactor_seller.js';
+import { getInfoContract_seller } from '../api/getInfoContract_seller.js';
+import { getMaxamount_seller } from '../api/getMaxamount_seller.js';
+import { putInvoiceKeyIn_seller } from '../api/putInvoiceKeyIn_seller.js';
+import { getListInvoice_seller } from '../api/getListInvoice_seller.js';
+import { getListOverDueInvoice_seller } from '../api/getListOverDueInvoice_seller.js';
+import { getListAttachment_seller } from '../api/getListAttachment_seller.js';
+import { getListGroup_seller } from '../api/getListGroup_seller.js';
+import { getReportLog_seller } from '../api/getReportLog_seller.js';
 
 
 
 //============================================================================
 
 export default function () {    //เรียกใช้ API ใน export default function
-  response = getListFactor_seller()    //1
+  //------------ seller
+  //response = getListFactor_seller()    //1
+  //response = getInfoContract_seller()  //2
+  //response = getMaxamount_seller()       //3
+  //response = putInvoiceKeyIn_seller()    //4
+  //response = getListInvoice_seller()      //5
+  //response = getListOverDueInvoice_seller()  //6
+  //response = getListAttachment_seller()    //7
+  //response = getListGroup_seller()      //8
+  //response = getReportLog_seller()    //9
 
 
   error_check(response);
