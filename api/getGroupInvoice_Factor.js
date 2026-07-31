@@ -1,14 +1,16 @@
 import http from "k6/http";
 
-export function getReportLog_Factor() {
+export function getGroupInvoice_Factor() {
   const url =
-    "https://uatfactoring.one.th/service/factor/reportlog/getReportLog";
+    "https://uatfactoring.one.th/service/factor/disburse/getGroupInvoice";
 
   const payload = JSON.stringify({
-    platform_id: "2460437578782",
-    limit: 50,
-    offset: 0,
+    platformId: "2460437578782",
     accountOneId: "1334789002480590",
+    sellerTaxId: "8871508007916",
+    limit: 20,
+    offset: 0,
+    status: "SENTED",
   });
 
   const params = {

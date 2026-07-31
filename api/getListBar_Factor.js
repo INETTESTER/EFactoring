@@ -1,14 +1,11 @@
 import http from "k6/http";
 
-export function getReportLog_Factor() {
+export function getListBar_Factor() {
   const url =
-    "https://uatfactoring.one.th/service/factor/reportlog/getReportLog";
+    "https://uatfactoring.one.th/service/factor/dashboard/getListBar";
 
   const payload = JSON.stringify({
     platform_id: "2460437578782",
-    limit: 50,
-    offset: 0,
-    accountOneId: "1334789002480590",
   });
 
   const params = {

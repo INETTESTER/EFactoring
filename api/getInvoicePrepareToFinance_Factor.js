@@ -1,13 +1,12 @@
 import http from "k6/http";
 
-export function getReportLog_Factor() {
+export function getInvoicePrepareToFinance_Factor() {
   const url =
-    "https://uatfactoring.one.th/service/factor/reportlog/getReportLog";
+    "https://uatfactoring.one.th/service/factor/reportlog/getInvoicePrepareToFinance";
 
   const payload = JSON.stringify({
-    platform_id: "2460437578782",
-    limit: 50,
-    offset: 0,
+    platformId: "2460437578782",
+    platformBranch: "00000",
     accountOneId: "1334789002480590",
   });
 
