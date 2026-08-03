@@ -1,0 +1,29 @@
+{
+    "metrics": {
+        "vus": {
+            "value": 9000,
+            "min": 0,
+            "max": 9000
+        },
+        "vus_max": {
+            "value": 9000,
+            "min": 3023,
+            "max": 9000
+        },
+        "data_sent": {
+            "count": 6852336,
+            "rate": 676202.7099478338
+        },
+        "data_received": {
+            "count": 45178050,
+            "rate": 4458263.552773642
+        }
+    },
+    "root_group": {
+        "groups": {},
+        "checks": {},
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+}

@@ -18,7 +18,7 @@ export function getSeller_Factor() {
   const response = http.post(url, payload, params);
 
   // Log response body
-  console.log(`Response Body: ${response.body}`);
+  //console.log(`Response Body: ${response.body}`);
 
   // Return response
   return response;

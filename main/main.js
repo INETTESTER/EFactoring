@@ -40,13 +40,13 @@ export default function () {    //เรียกใช้ API ใน export def
   //------------ Factor
   //response = getListSeller_Factor()   //1 
   //response = getListBuyer_Factor()   //2 
-  //response = getAmountAll_Factor()    //3 
+  //response = getAmountAll_Factor()    //3 Remerk By Dev not Test.
   //response = getListBar_Factor()   //4 
   //response = getSeller_Factor()    //5 
   //response = getGroupInvoice_Factor()   //6 
   //response = getInvoicePrepareToFinance_Factor()   //7 
   //response = getReportLog_Factor()    //8 
-  //response = getListInterestedCustomer_Factor()    //9
+  response = getListInterestedCustomer_Factor()    //9
 
   error_check(response);
   sleep(1)

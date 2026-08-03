@@ -5,7 +5,7 @@ export function getListInterestedCustomer_Factor() {
     "https://uatfactoring.one.th/service/factor/config/getListInterestedCustomer";
 
   const payload = JSON.stringify({
-    platform_id: "2460437578782",
+    platformId: "2460437578782",
     accountOneId: "1334789002480590",
   });
 
@@ -18,7 +18,7 @@ export function getListInterestedCustomer_Factor() {
   const response = http.post(url, payload, params);
 
   // Log response body
-  console.log(`Response Body: ${response.body}`);
+  //console.log(`Response Body: ${response.body}`);
 
   // Return response
   return response;
